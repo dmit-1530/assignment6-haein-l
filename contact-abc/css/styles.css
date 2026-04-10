@@ -87,7 +87,8 @@ textarea {
 form fieldset div {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 1rem;
+    row-gap: 2.5rem;
 }
 
 fieldset {
@@ -103,11 +104,11 @@ form fieldset div label {
     cursor: pointer;
     flex-grow: 1;
     flex-basis: calc((20rem - 100%) * 999);
-    min-inline-size: min(100%, 18.125rem);
+    min-inline-size: min(100%, 214.6px);
     max-inline-size: 100%;
     white-space: nowrap;
-    text-align: center;
-    padding: 1rem 3rem;
+    padding: 1rem;
+    
 }
 
 span {
@@ -123,6 +124,11 @@ form textarea {
 fieldset div {
     margin-bottom: 1.125rem;
 }
+fieldset label input[type="radio"] {
+    width: 15px;
+    height: 15px;    
+}
+
 
 fieldset label:has(input[type="radio"]:checked) {
     background-color: var(--oragne);
