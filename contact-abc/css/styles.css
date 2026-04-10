@@ -77,7 +77,7 @@ select,
 textarea {
     border: 1px solid var(--grey);
     border-radius: .5rem;
-    height: 2.5rem;
+    height: 3.25rem;
     padding: 0.5rem;
     width: 100%;
 }
