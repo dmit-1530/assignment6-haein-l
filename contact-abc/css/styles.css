@@ -27,22 +27,24 @@ h2 {
     border-bottom: var(--border-bottom);
     max-width: 16.625rem;
     margin-bottom: 1.5rem;
+    padding-left: .25rem;
+    padding-bottom: .1875rem;
+    min-width: 17.1875rem;
+    margin-top: 2rem;
 }
 
 legend {
     font-size: 1rem;
     line-height: 150%;
     font-weight: normal;
+    padding-bottom: .5rem;
 }
 
 p {
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
-}
-
-section {
-    margin: 3rem 0;
+    margin-bottom: 2rem;
 }
 
 header {
@@ -50,8 +52,14 @@ header {
     flex-grow: 1;
 }
 
+form div {
+    margin-bottom: 2rem;
+}
+
 form {
     padding: 2rem 1rem;
+    background-color: white;
+    border: 1px solid var(--grey) padding: 2rem 1rem;
     flex-basis: 0;
     flex-grow: 999;
     min-inline-size: 70%;
@@ -59,7 +67,6 @@ form {
 
 form label:not(input[type="radio"] + label, input[type="checkbox"] + label) {
     display: block;
-    border-color: var(--grey);
     margin-bottom: 0.5rem;
     width: 100%;
     line-height: 1.5;
@@ -68,13 +75,93 @@ form label:not(input[type="radio"] + label, input[type="checkbox"] + label) {
 form input:not([type="radio"], [type="checkbox"], [type="submit"]),
 select,
 textarea {
+    border: 1px solid var(--grey);
+    border-radius: .5rem;
     height: 2.5rem;
     padding: 0.5rem;
     width: 100%;
 }
 
-form fieldset:nth-of-type(2) div {
+
+
+form fieldset div {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2.5rem;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 2.5rem;
+    padding: 0;
+}
+
+
+form fieldset div label {
+    border-radius: .5rem;
+    border: 1px solid #c1c4c8;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-basis: calc((20rem - 100%) * 999);
+    min-inline-size: min(100%, 18.125rem);
+    max-inline-size: 100%;
+    white-space: nowrap;
+    text-align: center;
+    padding: 1rem 3rem;
+}
+
+span {
+    margin-right: 1rem;
+}
+
+form textarea {
+    max-height: 12.5rem;
+    min-height: 256px;
+    resize: vertical;
+}
+
+fieldset div {
+    margin-bottom: 1.125rem;
+}
+
+fieldset label:has(input[type="radio"]:checked) {
+    background-color: var(--oragne);
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: var(--oragne);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+
+    background-color: var(--hover);
+    letter-spacing: 2px;
+}
+
+@media (min-width: 760px) {
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    header {
+        flex: 0 0 30%;
+    }
+}
+
+@media (min-width: 1560px) {
+    .container {
+        padding: 0;
+        max-width: 1560px;
+        margin: 0 auto;
+    }
 }
