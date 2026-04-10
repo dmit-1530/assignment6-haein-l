@@ -1,8 +1,80 @@
+:root {
+    --oragne: #CB4E0B;
+    --grey: #C1C4C8;
+    --border-left: 5px solid var(--oragne);
+    --border-bottom: 3px solid var(--oragne);
+
+}
+
+
 body {
     background-color: #F2F6FA;
     font-family: "Noto Sans Bhaiksuki", sans-serif;
 }
 
 .container {
+    margin: 0 auto;
     padding: 0 1rem;
+    max-width: 1560px;
+
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 150%;
+    border-left: var(--border-left);
+    border-bottom: var(--border-bottom);
+    max-width: 16.625rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+header {
+    flex-basis: clamp(9rem, 30ch, 25%);
+    flex-grow: 1;
+}
+
+form {
+    padding: 2rem 1rem;
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 70%;
+}
+
+form label:not(input[type="radio"] + label, input[type="checkbox"] + label) {
+    display: block;
+    border-color: var(--grey);
+    margin-bottom: 0.5rem;
+    width: 100%;
+    line-height: 1.5;
+}
+
+form input:not([type="radio"], [type="checkbox"], [type="submit"]),
+select,
+textarea {
+    height: 2.5rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+form fieldset:nth-of-type(2) div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
